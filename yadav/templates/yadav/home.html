@@ -1,0 +1,23 @@
+<h1> narender's portfolio </h1>
+
+{% load static %}
+
+<img src="{% static 'yadav/photo_6.jpg' %}">
+
+
+
+
+{% for hellos in hellos %}
+
+<h2>{{ hellos.title }}</h2>
+<br>{{ hellos.description }}
+<img src="{{ hellos.image.url }}", height=200, width=200>
+
+{% if hellos.url %}
+<a href="{{ hellos.url }}">Link</a>
+{% endif %}
+
+
+
+
+{% endfor %}
